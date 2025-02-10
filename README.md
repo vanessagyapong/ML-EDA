@@ -55,6 +55,10 @@ The dataset underwent the following cleaning steps:
   - Extreme values in `Daily_Usage_Time` were capped to reasonable limits.
   - `Satisfaction` scores outside the 1-5 range were corrected.
 
+Feature Engineering
+•Usage Frequency: Label encoded Usage_Frequency into numerical values (e.g., Daily = 3, Weekly = 2, Monthly = 1).
+•Active App Count: Created a new feature, Active_App_Count, representing the number of dating apps a user is actively using (either 1 or 2).
+
 ### Version Control
 
 - The cleaned dataset was committed as Version 1 in GitHub with the commit message:
