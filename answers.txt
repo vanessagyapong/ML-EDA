@@ -1,0 +1,34 @@
+Q7
+1. What were the most surprising insights from this dataset?
+	•	App Usage Patterns: The fact that users on metro and non-metro locations displayed significantly different app usage behaviors, with non-metro users having higher daily usage time, was a surprising insight. This could reflect how people in different locations engage with dating apps.
+	•	Satisfaction and Usage Correlation: The relationship between the frequency of usage and user satisfaction could provide valuable insights into whether frequent users are more satisfied with the app, or if those who are less satisfied tend to use the app more in hopes of finding a better match.
+	•	Feature Preferences: The varying desired features, such as video calls and AI recommendations, can provide insights into what users are hoping to improve in the dating app experience, guiding future app development.
+
+2. What would you do differently if given more time?
+	•	Deeper Segmentation: I would dive deeper into segmenting the dataset by additional user demographics such as age and education level, and analyze their specific behavior across different apps. This would help understand how various groups use the apps differently.
+	•	Feature Engineering: I would create more complex features, such as interaction terms between variables (e.g., combining Age with Primary_App or Location with Usage_Frequency), which could improve model prediction accuracy.
+	•	Temporal Analysis: If time allowed, I would include time-based analysis (such as seasonality of app usage) to understand if preferences or usage patterns shift over time.
+	•	A/B Testing: I would conduct A/B tests to evaluate the effectiveness of the features desired by users, like AI recommendations or video calls, and incorporate that feedback into the app’s future iterations.
+
+3. How can we improve dataset documentation for others?
+	•	Clear Data Dictionary: The data dictionary is a good start but can be expanded with more examples of categorical values for columns like Education, Occupation, and Primary_App. Including some sample rows would make it clearer.
+	•	Data Preprocessing Steps: Documenting the preprocessing steps in more detail, such as the exact strategy used for handling missing values (e.g., specific imputation techniques used) and outlier handling would make it easier for others to replicate or build on the analysis.
+	•	Explain Feature Engineering: The rationale behind feature engineering choices should be explained more clearly in the documentation, especially for new features like Active_App_Count and how it was derived. This ensures others understand the reasoning behind creating new features.
+	•	Visualizations: Include a section that describes the key visualizations and why each is important for understanding the data. This helps readers interpret visual outputs correctly.
+	•	Code Comments: For anyone using the code for further analysis or modification, ensuring that the code is well-commented, especially around key data cleaning and transformation steps, to make it easier for someone new to pick up and use.
+
+Q8
+
+1. If a dating app wanted to expand into rural India, which insights from this dataset would be most valuable?
+	•	App Usage by Location: The most valuable insight would be the difference in behavior between users from metro cities versus non-metro (or rural) areas. From the dataset, rural users may have distinct preferences or behaviors (e.g., higher daily usage time). Understanding how rural users engage with dating apps can help in tailoring features and marketing strategies for that demographic.
+	•	Feature Preferences: Another important insight would be the features desired by users. If rural users prefer certain features (such as text communication over video), these insights could guide the design of a lightweight app that works well with slower internet connections and less powerful devices, which are more common in rural areas.
+	•	Age and Satisfaction: Understanding how different age groups from rural areas engage with apps can be crucial. Younger age groups in rural areas may be more inclined toward apps that offer simple, user-friendly interfaces and may value privacy or casual interactions more than users in urban areas.
+
+2. If you were designing a new dating app based on this data, what two features would you add?
+	•	Text-Based Communication Options: Based on user preferences, text communication seems to be a preferred mode, especially for users from smaller towns or rural areas. A new feature enabling more text-based interaction, such as pre-written templates or guided conversation starters, would likely resonate with this demographic.
+	•	AI-Powered Matchmaking and Recommendations: Given that many users expressed interest in features like AI recommendations and smarter matchmaking, integrating AI-based suggestions (like personality-based matches or shared interests) could help improve the user experience by providing more relevant connections. This would cater to users looking for more personalized matches, improving app engagement and satisfaction.
+
+3. What were the biggest data cleaning challenges in this dataset?
+	•	Handling Missing Values: Missing data in categorical and numerical columns posed a challenge. For categorical variables (e.g., Education, Occupation), filling missing values with the mode required careful consideration to avoid introducing bias. Numerical columns, especially Daily_Usage_Time, required more detailed handling to ensure that missing or inconsistent values (e.g., some users providing data in minutes while others used hours) were appropriately processed.
+	•	Standardizing Categorical Data: Some of the categorical columns like Gender, Primary_App, and Reason_for_Using had variations in text entries (e.g., “Male” vs. “male”), which needed to be cleaned and standardized to ensure consistency.
+	•	Handling Outliers: Some outlier values in numerical columns, such as Satisfaction scores or Daily_Usage_Time, required proper capping or adjustments to avoid skewing the analysis. For instance, the use of IQR or other statistical methods helped identify outliers, but choosing the right thresholds was critical to ensure that valid data wasn’t removed inadvertently.
